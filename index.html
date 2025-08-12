@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>오늘의 운세 | 무료 & 유료</title>
+  <meta name="description" content="무료 운세와 유료 맞춤 운세를 한 페이지에서! 이름과 생년월일로 빠르게 확인하세요." />
+  <style>
+    :root{ --bg:#0b0f1a; --card:#141a2a; --muted:#8aa0b7; --text:#eef3ff; --gold:#f6c66f; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Segoe UI",Roboto,Helvetica,Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+      background: radial-gradient(1200px 700px at 80% -10%, rgba(106,165,255,.15), transparent),
+                  radial-gradient(900px 600px at 0% 100%, rgba(246,198,111,.12), transparent), var(--bg);
+      color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    .hero{display:grid;gap:18px;justify-items:center;text-align:center;padding:36px 16px 24px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#cfe0ff;background:rgba(255,255,255,.03);font-size:12px}
+    .title{font-weight:800;line-height:1.05;letter-spacing:-0.02em;font-size:36px}
+    .subtitle{color:var(--muted);font-size:14px}
+    .card{width:100%;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.35);padding:22px}
+    .grid{display:grid;gap:14px}
+    .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 18px;border-radius:14px;border:1px solid transparent;text-decoration:none;color:#0b0f1a;font-weight:700;cursor:pointer}
+    .btn:active{transform:translateY(1px)}
+    .btn-free{background:#e6f0ff;border-color:#cfe0ff}
+    .btn-free .kicker{color:#2d5cff;font-weight:800}
+    .btn-paid{background:linear-gradient(180deg, #ffe9b5, #f6c66f);border-color:#e9b95e}
+    .btn-paid .kicker{color:#6b4600;font-weight:800}
+    .usp{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+    .usp .item{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px}
+    .item .emoji{font-size:18px}
+    .item .txt{font-size:13px;color:#cfe0ff}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);margin:16px 0}
+    .muted{color:var(--muted);font-size:12px}
+    .examples{display:grid;gap:8px;margin-top:6px}
+    .ex-row{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#dfe9ff}
+    footer{margin:24px 0 6px;text-align:center;color:#9bb0c9;font-size:11px}
+    .lock{opacity:.6;filter: blur(.4px)}
+    .tiny{font-size:11px;color:#a9b9d0}
+    /* 모바일 최적화 */
+    @media(max-width:480px){
+      .title{font-size:28px}
+      .subtitle{font-size:13px}
+      .btn{padding:14px;font-size:15px}
+      .usp{grid-template-columns:1fr!important;gap:8px}
+      .card{padding:16px}
+      .wrap{padding:16px}
+    }
+    @media(min-width:740px){
+      .title{font-size:44px}
+      .grid{grid-template-columns:1.2fr .8fr;align-items:start}
+      .usp{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="badge">🔮 오늘의 운세 · 이름+생년월일 10초 컷</span>
+      <h1 class="title">지금, 당신을 기다리는 <span style="color:var(--gold)">기회</span>가 있을까요?</h1>
+      <p class="subtitle">간편하게 운세를 확인해 보세요.</p>
+    </section>
+
+    <section class="card grid" aria-label="CTA 영역">
+      <div>
+        <!-- 주소 고정 불가(대상 사이트 보안 정책). 대신 제공된 짧은 링크를 그대로 사용하여 수수료 추적 보장. -->
+        <a class="btn btn-free" href="https://events-news.com/Mjc1NA" id="free-link" data-qa="free-link" target="_blank" rel="noopener">
+          <span>🔓 <span class="kicker">오늘의 무료 운세</span></span>
+        </a>
+        <div class="examples">
+          <div class="ex-row">
+            <span class="chip">오늘의 한 줄 운세</span>
+            <span class="chip">이번 주 키워드</span>
+            <span class="chip lock">카카오톡으로 바로 확인</span>
+          </div>
+          <p class="tiny">※ 빠르게 무료 운세 확인하세요.</p>
+        </div>
+        <div class="divider"></div>
+        <a class="btn btn-paid" href="https://events-news.com/MjkzMw" id="paid-link" data-qa="paid-link" target="_blank" rel="noopener">
+          <span>✨ <span class="kicker">유료 맞춤 운세 보러 가기</span>
+        </a>
+        
+        <p class="muted">9,900원 ~ 36,900원 · PDF 파일 제공· 명리학 기반/무한 질문 가능</p>
+      </div>
+      <div>
+        <div class="usp">
+          <div class="item"><div class="emoji">⚡</div><div class="txt">10초 입력 즉시 확인</div></div>
+          <div class="item"><div class="emoji">🎯</div><div class="txt">생년월일·이름 기반</div></div>
+          <div class="item"><div class="emoji">🎁</div><div class="txt">이번 주 ‘행동 가이드’ 제공</div></div>
+          <div class="item"><div class="emoji">💰</div><div class="txt">금전운·사업운 세부 분석(유료)</div></div>
+          <div class="item"><div class="emoji">❤️</div><div class="txt">연애·관계운·애정운 타이밍(유료)</div></div>
+          <div class="item"><div class="emoji">📄</div><div class="txt">PDF 리포트 제공(유료)</div></div>
+        </div>
+        <div class="divider"></div>
+        <p class="tiny">TIP: 무료로 감 잡고, 중요한 결정 전엔 맞춤 리포트로 깊게 확인하세요.</p>
+      </div>
+    </section>
+
+    <footer>
+      © 오늘의 운세는 사주 톡톡 제공 및 참고용이며 법적 효력은 없습니다.
+    </footer>
+  </div>
+
+  <!-- 참고: 대상 사이트가 X-Frame-Options/CSP로 iframe을 차단하므로, 주소창 고정 방식은 불가합니다. 링크는 제공받은 단축 URL을 그대로 사용하여 첫 클릭 어트리뷰션을 보장합니다. -->
+  <script>
+  // MetaMask 등 외부 확장 오류 무시 (주소/링크에는 영향 없음)
+  (function(){
+    function isMM(msg){ return /metamask|ethereum|failed to connect to metamask/i.test(String(msg||'')); }
+    window.addEventListener('error', function(e){
+      if(isMM(e && e.message)){
+        e.preventDefault();
+        if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+      }
+    }, true);
+    window.addEventListener('unhandledrejection', function(e){
+      var r = e && (e.reason && (e.reason.message || e.reason) || e);
+      if(isMM(r)){
+        e.preventDefault();
+        if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+      }
+    }, true);
+  })();
+</script>
+</body>
+</html>
